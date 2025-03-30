@@ -1,0 +1,53 @@
+?? Aprendizados Principais
+1. Mapa do Ambiente
+o Registra posições visitadas via MapMemory
+o Aprende padrões de movimentação eficientes entre áreas
+o Identifica locais seguros vs. perigosos
+2. Combate e Inimigos
+o Aprende a reconhecer padrões de spawn de inimigos (quantidade e posições)
+o Desenvolve estratégias baseadas em: 
+* Tipo de inimigo (pela cor/forma detectada)
+* Número de adversários simultâneos
+3. Gerenciamento de Recursos
+o Otimiza coleta de XP: 
+* Aprende quais ações geram mais XP/recompensa
+* Desenvolve rotas eficientes entre pontos de coleta
+o Controla uso de habilidades (cooldowns implícitos)
+4. Sobrevivência
+o Correlaciona padrões visuais com status de vida
+o Aprende a evitar situações de quase-morte: 
+* Quando recuar (retreat_left)
+* Quando usar poções (via current_health)
+5. Timing de Ações
+o Descobre intervalos ideais entre: 
+* Movimentação
+* Habilidades
+* Coleta de itens
+?? Métricas de Aprendizado Implícitas
+ObjetivoComo é MedidoOnde no CódigoEficiência em XPreward = xp_gained * 10step()Sobrevivência_check_death() e current_healthVárias chamadasPrecisão de AçõesAcertos em alvos (detect_enemies())Processamento de contornos
+
+?? Padrões de Comportamento Emergentes
+1. Rotas Otimizadas:
+o Combina move_pattern_1 + engage_right quando muitos inimigos
+o Prefere retreat_left quando vida < 30%
+2. Gestão de Combate:
+o Usa habilidades em área (skill_combo_2) contra grupos
+o Foca em inimigos únicos com skill_combo_1
+3. Prevenção de Erros:
+o Evita repetir ações que levam a done=True (game over)
+o Ajusta movimentos baseado em colisões passadas
+?? Limitações Atuais
+* Não persiste o aprendizado entre sessões (reinicia a cada execução)
+* Depende fortemente de detecção visual (pode falhar em variações de cor)
+* Lógica de recompensa simplificada (xp_gained * 10)
+?? Próximos Estágios de Aprendizado
+1. Memória de Longo Prazo:
+o Salvar mapa aprendido em arquivo
+o Lembrar posições de chefes/itens raros
+2. Adaptação Dinâmica:
+o Ajustar estratégia baseado no desempenho atual
+o Desenvolver "estilos" de jogo (agressivo/cauteloso)
+3. Aprendizado por Imitação:
+o Gravar sessões humanas para extrair padrões
+o Criar "demonstrações" de rotas ideais
+

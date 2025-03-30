@@ -1,0 +1,33 @@
+✅ Estrutura Final Funcionando
+
+Copiar
+EternalQuestAI/
+├── utils/
+│   ├── __init__.py
+│   ├── screen_capture.py    # Captura full screen + countdown
+│   └── input_simulator.py   # Controles do jogo
+│
+├── envs/
+│   ├── __init__.py
+│   └── eternal_quest.py     # Ambiente RL com XP tracking
+│
+└── run_full_screen.py       # Script principal
+
+
+🚀 Como Executar (Passo a Passo)
+Prepare o jogo:
+Deixe em tela cheia no monitor principal
+Feche outros programas que possam sobrepor
+
+
+Execute o sistema:
+bash
+
+Copiar
+cd C:\EternalQuestAI
+python run_full_screen.py
+Fará contagem regressiva (3, 2, 1)
+Iniciará ações automáticas
+
+Interrompa a qualquer momento:
+Pressione Ctrl + C no terminal.
